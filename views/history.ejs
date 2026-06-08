@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mood History</title>
+</head>
+<body>
+
+<h1>Mood History</h1>
+
+<table border="1">
+
+<tr>
+    <th>ID</th>
+    <th>Mood</th>
+    <th>Note</th>
+    <th>Date</th>
+</tr>
+
+<% moods.forEach(function(item){ %>
+
+<tr>
+    <td><%= item.id %></td>
+    <td><%= item.mood %></td>
+    <td><%= item.note %></td>
+    <td><%= item.entry_date %></td>
+</tr>
+
+<% }) %>
+
+</table>
+
+</body>
+</html>

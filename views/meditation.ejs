@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meditation Sessions</title>
+</head>
+<body>
+
+<h1>Meditation Sessions</h1>
+
+<table border="1">
+
+<tr>
+    <th>Title</th>
+    <th>Category</th>
+    <th>Video Link</th>
+</tr>
+
+<% sessions.forEach(function(item){ %>
+
+<tr>
+    <td><%= item.title %></td>
+    <td><%= item.category %></td>
+    <td>
+        <a href="<%= item.video_link %>" target="_blank">
+            Watch
+        </a>
+    </td>
+</tr>
+
+<% }) %>
+
+</table>
+
+</body>
+</html>
