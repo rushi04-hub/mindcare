@@ -1,10 +1,10 @@
 const mysql = require("mysql2");
 
 const db = mysql.createConnection({
-    host: "mysql-11b4bab2-rmore8199-6b64.g.aivencloud.com",
-    user: "avnadmin",
+    host: "process.env.DB_HOST",
+    user: "process.env.DB_HOST",
     password: "process.env.DB_PASSWORD",
-    database: "defaultdb",
+    database: "process.env.DB_NAME",
     port: 17309
 });
 
