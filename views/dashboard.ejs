@@ -1,56 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>MindCare Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MindCare Dashboard</title>
 
-    <style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        body{
-            font-family: Arial;
-            text-align:center;
-            background:#f5f5f5;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
-        h1{
-            color:#2c3e50;
-        }
+body{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1800&q=80');
+    background-size:cover;
+    background-position:center;
+}
 
-        .card{
-            width:300px;
-            margin:20px auto;
-            padding:20px;
-            background:white;
-            border-radius:10px;
-            box-shadow:0 0 10px gray;
-        }
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:50px 20px;
+}
 
-        a{
-            text-decoration:none;
-            font-size:20px;
-        }
+.header{
+    text-align:center;
+    color:white;
+    margin-bottom:50px;
+}
 
-    </style>
+.header h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
 
+.header p{
+    font-size:18px;
+    opacity:0.9;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    text-decoration:none;
+    color:#222;
+    transition:0.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.icon{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.card h2{
+    margin-bottom:10px;
+    color:#2c3e50;
+}
+
+.card p{
+    color:#666;
+    font-size:14px;
+}
+
+.footer{
+    text-align:center;
+    color:white;
+    margin-top:50px;
+}
+</style>
 </head>
 
 <body>
 
-<h1>🧠 MindCare Dashboard</h1>
+<div class="container">
 
-<div class="card">
-    <a href="/mood">😊 Add Mood</a>
+<div class="header">
+    <h1>🧠 MindCare</h1>
+    <p>Your Personal Mental Wellness Companion</p>
 </div>
 
-<div class="card">
-    <a href="/history">📋 Mood History</a>
+<div class="grid">
+
+<a href="/mood" class="card">
+    <div class="icon">😊</div>
+    <h2>Mood Tracker</h2>
+    <p>Record your daily emotions and thoughts.</p>
+</a>
+
+<a href="/history" class="card">
+    <div class="icon">📈</div>
+    <h2>Mood History</h2>
+    <p>Review previous mood entries and patterns.</p>
+</a>
+
+<a href="/insight" class="card">
+    <div class="icon">🤖</div>
+    <h2>AI Insights</h2>
+    <p>Get intelligent emotional analysis.</p>
+</a>
+
+<a href="/meditation" class="card">
+    <div class="icon">🧘</div>
+    <h2>Meditation</h2>
+    <p>Relax with guided mindfulness sessions.</p>
+</a>
+
 </div>
 
-<div class="card">
-    <a href="/insight">🤖 AI Emotional Insight</a>
+<div class="footer">
+    <p>Take care of your mind every day ❤️</p>
 </div>
 
-<div class="card">
-    <a href="/meditation">🧘 Meditation Sessions</a>
 </div>
 
 </body>
